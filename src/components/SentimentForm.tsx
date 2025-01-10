@@ -16,7 +16,7 @@ const SentimentForm: React.FC = () => {
     setError(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
+      const response = await fetch("http://127.0.0.1:8000/analyze", { //fetching the backend API
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const SentimentForm: React.FC = () => {
       }
 
       const data = await response.json();
-    console.log("Backend Response:", data); // Log response
+    console.log("Backend Response:", data); 
     setSentiment(data);
   } catch (err) {
     if (err instanceof Error) {
@@ -37,7 +37,7 @@ const SentimentForm: React.FC = () => {
     } else {
       setError("An unknown error occurred");
     }
-    console.error(err); // Log error
+    console.error(err); 
   } finally {
     setLoading(false);
   }
