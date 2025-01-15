@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Adjust the type to handle numeric values from the backend response
 interface SentimentResponse {
-  sentiment: number; // This will handle numeric sentiment values (0, 1, 2)
+  sentiment: number; 
 }
 
 const SentimentForm: React.FC = () => {
@@ -45,7 +45,7 @@ const SentimentForm: React.FC = () => {
 
   
   const sentimentMapping: { [key: string]: string } = {
-   "Negative": "Negative 🤮",
+   "Negative": "Negative 🤮",        // you can use what ever message you eant to share
     "Neutral": "Neutral 😊",
     "Positive": "Positive 👌",
   };
